@@ -6,14 +6,15 @@ import io.cucumber.testng.CucumberOptions;
 import org.openqa.selenium.WebDriver;
 
 @CucumberOptions(
-        features = {"src/test/java/features"},
-        glue = {"stepDefinitons", "util"},
+        features = {"src/test/java/Feature"},
+        glue = {"StepDefinitions", "Util"},
         tags = "",
         plugin = {
                 "summary", "pretty", "html:Reports/CucumberReport/Reports.html"
         }
 )
 
-public class runners extends AbstractTestNGCucumberTests {
-    static WebDriver driver = DriverFactory.getDriver();
+public class testRunner extends AbstractTestNGCucumberTests {
+        static WebDriver driver = DriverFactory.getDriver();
+
 }
